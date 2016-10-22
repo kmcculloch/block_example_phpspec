@@ -3,21 +3,22 @@
 This module rewrites a hook from the Drupal 7 block_example module to demonstrate PHPSpec BDD techniques.
 
 Kevin McCulloch
+
 p.kevin.mcculloch@gmail.com
 
 ## Usage
 
-1. Install Composer:
+Install Composer:
 
-https://getcomposer.org/download/
+`https://getcomposer.org/download/`
 
-2. cd to the root of this repository and install PHPSpec:
+cd to the root of this repository and install PHPSpec:
 
-composer install
+`composer install`
 
-3. Run the PHPSpec tests:
+Run the PHPSpec tests:
 
-vendor/bin/phpspec run
+`vendor/bin/phpspec run`
 
 ## Why?
 
@@ -107,9 +108,9 @@ that can handle our component's request to call drupal_strtoupper().
 
 To use PHPSpec in Drupal 7 you need to introduce namespaces into your code.
 For a simple module like this, I recommend the xautoload module. All you need
-to do is add xautoload to your mymodule.info file and the module will load
-all of the code in your module's src/ directory into the Drupal\mymodule
-namespace automatically.
+to do is add xautoload as a dependency in your mymodule.info file and it
+will load all of the code in your module's src/ directory into the
+Drupal\mymodule namespace automatically.
 
 Since PHPSpec runs on the command line, it uses Composer autoloading. Check out
 the "autoload-dev" directive in `composer.json` to see the autoload mapping
