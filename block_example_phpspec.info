@@ -1,0 +1,5 @@
+name = Block Example Using PHPSpec
+description = Rewriting a hook from Drupal's block_example module to demonstrate PHPSpec BDD techniques
+package = Example modules
+core = 7.x
+dependencies[] = xautoload

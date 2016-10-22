@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * An example field using the Field Types API.
+ */
+
+use Drupal\block_example_phpspec\DrupalServiceWrapper;
+use Drupal\block_example_phpspec\BlockProcessor;
+
+/**
+ * Implements hook_block_view_alter().
+ *
+ * Rewrite of a hook from the block example module.
+ *
+ * @see block_example_block_view_alter()
+ */
+function block_example_phpspec_block_view_alter(&$data, $block) {
+  $drupal = new DrupalServiceWrapper();
+  $processor = new BlockProcessor($drupal);
+
+  // We'll search for the string 'uppercase'.
+  if ($processor->findUppercase($data, $block)) {
+    // This will uppercase the default title.
+    $data = $processor->setDataToUppercase($data);
+    // This will uppercase a title set in the UI.
+    $block = $processor->setBlockToUppercase($block);
+  }
+}

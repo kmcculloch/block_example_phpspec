@@ -1,0 +1,19 @@
+{
+    "name": "kmcculloch/block_example_phpspec",
+    "description": "Rewriting a hook from Drupal's block_example module to demonstrate PHPSpec BDD techniques",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Kevin McCulloch",
+            "email": "p.kevin.mcculloch@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpspec/phpspec": "~2.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Drupal\\block_example_phpspec\\": "src"
+        }
+    }
+}
